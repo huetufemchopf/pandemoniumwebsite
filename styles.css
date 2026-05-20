@@ -130,6 +130,11 @@ a:focus-visible {
   margin: 0;
 }
 
+.intro-list__workshop,
+.intro-list__contact {
+  margin-top: 2rem;
+}
+
 .intro-list__lead {
   display: flex;
   flex-wrap: wrap;
