@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Track with Ads Workshop — Pandemonium Office</title>
+    <meta
+      name="description"
+      content="Track with Ads Workshop — a hands-on encounter with online ad tracking by Pandemonium Office."
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @keyframes geo-eye-blink {
+        0%, 86%, 100% { transform: scaleY(1); }
+        90%, 93%      { transform: scaleY(0.04); }
+        96%           { transform: scaleY(1); }
+      }
+
+      :root {
+        --content-width: 58rem;
+      }
+
+      .project-page {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-header {
+        padding: 2rem 2rem 0;
+        max-width: var(--content-width);
+        margin-inline: auto;
+        width: 100%;
+      }
+
+      .back-link {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.04em;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        color: var(--text);
+      }
+
+      .project-main {
+        flex: 1;
+        padding: 3rem 2rem 6rem;
+        max-width: var(--content-width);
+        margin-inline: auto;
+        width: 100%;
+      }
+
+      .project-eye {
+        margin: 0 auto 3.5rem;
+        color: var(--text);
+      }
+
+      .project-title {
+        font-family: var(--font-serif);
+        font-size: clamp(1.6rem, 5vw, 2.8rem);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 1.15;
+        margin: 0 0 2.2rem;
+      }
+
+      .project-body {
+        line-height: 1.75;
+        margin-bottom: 0;
+      }
+
+      .project-body p {
+        margin: 0 0 1.1em;
+      }
+
+      .project-body p:last-child {
+        margin-bottom: 0;
+      }
+
+      .project-link {
+        display: inline-block;
+        margin-top: 2.2rem;
+        font-size: 0.8125rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* ── sections ───────────────────────────────── */
+
+      .project-sections {
+        margin-top: 4.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .project-section {
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        gap: 0 3rem;
+        padding: 2.4rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin: 0;
+        font-family: var(--font);
+        font-weight: 400;
+        padding-top: 0.25em;
+      }
+
+      .section-content {
+        min-width: 0;
+      }
+
+      .section-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.7;
+      }
+
+      .section-list li {
+        margin-bottom: 0.75em;
+        padding-left: 1em;
+        position: relative;
+      }
+
+      .section-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-list li::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+        color: var(--text-muted);
+      }
+
+      .section-text {
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .section-meta {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.7;
+      }
+
+      .section-meta li {
+        display: grid;
+        grid-template-columns: 8.5rem 1fr;
+        gap: 0 0.5rem;
+        margin-bottom: 0.25em;
+      }
+
+      .section-meta li:last-child {
+        margin-bottom: 0;
+      }
+
+      .meta-key {
+        color: var(--text-muted);
+        font-size: 0.875em;
+      }
+
+      .process-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem 2.5rem;
+      }
+
+      .process-step {
+        line-height: 1.6;
+      }
+
+      .process-step__num {
+        display: block;
+        color: var(--text-muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.35em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .process-step__body {
+        margin: 0;
+      }
+
+      @media (max-width: 600px) {
+        .project-section {
+          grid-template-columns: 1fr;
+          gap: 0.75rem 0;
+        }
+
+        .process-list {
+          grid-template-columns: 1fr;
+        }
+
+        .section-meta li {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project-page">
+      <header class="project-header">
+        <a class="back-link" href="./">← Pandemonium Office</a>
+      </header>
+
+      <main class="project-main" id="main">
+        <div class="project-eye" id="compound-eye-mount"></div>
+
+        <h1 class="project-title">Track with Ads Workshop</h1>
+
+        <div class="project-body">
+          <p>
+            Jedes Mal, wenn du eine App öffnest, die Werbung anzeigt, findet in Millisekunden eine
+            Auktion statt: Dein Standort, dein Gerät, deine Interessen – alles wird in Echtzeit
+            gesammelt, ausgewertet und versteigert. Du bist nicht der Kunde. Du bist ein Produkt.
+          </p>
+          <p>
+            Diese Daten landen längst nicht mehr nur in der Werbeindustrie. Datenhändler kaufen,
+            aggregieren und verkaufen sie weiter – an Geheimdienste, Versicherungen, und jeden, der
+            bereit ist zu zahlen. Fast immer ohne transparente Einwilligung der Betroffenen.
+          </p>
+          <p>
+            Im Workshop Track with Ads erlebst du hautnah, wie aus frei käuflichen Werbedaten ein
+            vollständiges Bewegungsprofil einer Person entsteht – und was das für Privatsphäre,
+            Autonomie und demokratische Teilhabe bedeutet.
+          </p>
+          <p>
+            Der Workshop richtet sich an alle, die verstehen wollen, wie dieses System wirklich
+            funktioniert – ob Bürger:innen, die ihre eigene digitale Spur hinterfragen, oder
+            Fachleute und Entscheider:innen, die konkret handeln wollen.
+          </p>
+          <a
+            class="project-link"
+            href="https://www.trackwithads.de/"
+            rel="noopener noreferrer"
+          >trackwithads.de ↗</a>
+        </div>
+
+        <div class="project-sections">
+
+          <section class="project-section">
+            <h2 class="section-label">Warum</h2>
+            <div class="section-content">
+              <ul class="section-list">
+                <li><strong>Unsichtbar sichtbar machen:</strong> Datenschutzrisiken existieren abstrakt – wir machen sie in 60 Minuten selbst erlebbar.</li>
+                <li><strong>Digitale Mündigkeit:</strong> Teilnehmende verstehen die Mechanismen des Werbe-Ökosystems und können informierte Entscheidungen treffen.</li>
+                <li><strong>Regulierungskompetenz:</strong> Grundlage für informierte Debatten über Datenschutzgesetze und die Regulierung von Data Brokern.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-label">Was</h2>
+            <div class="section-content">
+              <ul class="section-list">
+                <li><strong>Digitale Schnitzeljagd:</strong> Teams rekonstruieren Bewegungsprofile aus synthetischen Standortdaten, der einem realen aus dem Ad-Tech-Ökosystem nachempfunden ist.</li>
+                <li><strong>Live-Web-App:</strong> Analyse in Echtzeit im Browser – keine technischen Vorkenntnisse nötig.</li>
+                <li><strong>Plenumsdiskussion:</strong> Gemeinsame Reflexion und Diskussion über Regulierungsansätze zum Abschluss.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-label">Wie</h2>
+            <div class="section-content">
+              <p class="section-text">Format-flexibel: als eigenständiges Event, als interaktives Konferenz-Intermezzo oder eingebettet in ein umfassenderes Bildungsprogramm zu Datenschutz und Digitalpolitik.</p>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-label">Voraus&shy;setzungen</h2>
+            <div class="section-content">
+              <ul class="section-meta">
+                <li><span class="meta-key">Dauer</span><span>60–90 Minuten (Kernformat)</span></li>
+                <li><span class="meta-key">Teilnehmende</span><span>Teams à 3–5 Personen</span></li>
+                <li><span class="meta-key">Raum</span><span>Tische für Gruppenarbeit, Beamer oder Screen für Intro und Abschluss</span></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2 class="section-label">Prozess</h2>
+            <div class="section-content">
+              <ol class="process-list">
+                <li class="process-step">
+                  <span class="process-step__num">01</span>
+                  <p class="process-step__body"><strong>Intro &amp; Kontext</strong><br>Kurze Erklärung des RTB-Systems und der Datenschatten, die wir alle hinterlassen.</p>
+                </li>
+                <li class="process-step">
+                  <span class="process-step__num">02</span>
+                  <p class="process-step__body"><strong>Schnitzeljagd in Teams</strong><br>Teams analysieren echte Standortdaten und rekonstruieren ein Bewegungsprofil.</p>
+                </li>
+                <li class="process-step">
+                  <span class="process-step__num">03</span>
+                  <p class="process-step__body"><strong>Auflösung &amp; Plenum</strong><br>Ergebnisse werden geteilt, Prozess aufgedeckt, gemeinsame Reflexion.</p>
+                </li>
+                <li class="process-step">
+                  <span class="process-step__num">04</span>
+                  <p class="process-step__body"><strong>Diskussion &amp; Ausblick</strong><br>Regulierungsansätze, eigene Schutzmaßnahmen, offene Fragen.</p>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; <span data-year></span> Pandemonium Office</p>
+      </footer>
+    </div>
+
+    <script src="./eyes.js"></script>
+    <script>
+      (function () {
+        const yearEl = document.querySelector("[data-year]");
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+        const mount = document.getElementById("compound-eye-mount");
+        if (mount && window.createCompoundEye) {
+          createCompoundEye(mount, { width: 760, height: 300, spacing: 42, accentEvery: 9 });
+        }
+      })();
+    </script>
+  </body>
+</html>
