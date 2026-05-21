@@ -204,6 +204,31 @@
         margin: 0;
       }
 
+      .collab {
+        margin-top: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .collab__label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .collab__logo {
+        height: 2rem;
+        width: auto;
+        display: block;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+      }
+
+      .collab__logo:hover {
+        opacity: 1;
+      }
+
       @media (max-width: 600px) {
         .project-section {
           grid-template-columns: 1fr;
@@ -295,7 +320,7 @@
             <div class="section-content">
               <ul class="section-meta">
                 <li><span class="meta-key">Dauer</span><span>60–90 Minuten (Kernformat)</span></li>
-                <li><span class="meta-key">Teilnehmende</span><span>Teams à 3–5 Personen</span></li>
+                <li><span class="meta-key">Teilnehmende</span><span>Teams à 3–5 Personen, Gruppengrösse bis 40 Personen</span></li>
                 <li><span class="meta-key">Raum</span><span>Tische für Gruppenarbeit, Beamer oder Screen für Intro und Abschluss</span></li>
               </ul>
             </div>
@@ -330,6 +355,14 @@
 
       <footer class="site-footer">
         <p>&copy; <span data-year></span> Pandemonium Office</p>
+        <p class="collab">
+          <span class="collab__label">in Zusammenarbeit mit</span>
+          <img
+            src="./assets/nosedive-logo.png"
+            alt="nosedive studio"
+            class="collab__logo"
+          />
+        </p>
       </footer>
     </div>
 
