@@ -27,7 +27,7 @@ html {
     scroll-behavior: auto;
   }
 
-  .brand-corkscrew {
+  .brand-logo {
     display: none;
   }
 
@@ -110,7 +110,6 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 900px;
   background: var(--bg);
 }
 
@@ -158,34 +157,58 @@ a:focus-visible {
   color: var(--text);
 }
 
-.brand-corkscrew {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  margin: 0;
-  text-align: center;
-  white-space: nowrap;
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 16vw, 6.5rem);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: 0.02em;
-  color: var(--brand-pink);
-  transform-origin: center center;
-  animation: brand-corkscrew var(--brand-spin) linear infinite;
-  pointer-events: none;
-  will-change: transform;
+.brand-logo-link {
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes brand-corkscrew {
-  0% {
-    transform: rotateY(90deg) translateY(110vh) rotate(5deg);
-  }
-  100% {
-    transform: rotateY(-150deg) translateY(-70vh) rotate(5deg);
-  }
+.brand-logo {
+  display: block;
+  width: min(70vw, 20rem);
+  height: auto;
+  filter: brightness(0);
+}
+
+/* Impressum */
+.impressum {
+  width: min(var(--max-width), calc(100% - 3rem));
+  margin-inline: auto;
+  padding: 3rem 0 4rem;
+}
+
+.impressum__nav {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+
+.impressum h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  margin: 0 0 0.25rem;
+}
+
+.impressum__subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin: 0 0 2.5rem;
+}
+
+.impressum h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+}
+
+.impressum h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.25rem;
+}
+
+.impressum p {
+  margin: 0 0 0.75rem;
+  line-height: 1.65;
 }
 
 .site-footer {
@@ -201,4 +224,8 @@ a:focus-visible {
   margin: 0;
   max-width: var(--max-width);
   margin-inline: auto;
+}
+
+.site-footer a {
+  color: var(--text-muted);
 }
